@@ -1,0 +1,109 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  plugins:
+    dart_code_metrics
+  exclude:
+    - '**/*.g.dart'
+    - 'data/**/*.g.dart'
+
+linter:
+  rules:
+    - require_trailing_commas
+    - use_build_context_synchronously
+
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 20
+    number-of-parameters: 4
+    maximum-nesting-level: 1
+  metrics-exclude:
+    - test/**
+  rules:
+    - arguments-ordering:
+        child-last: true
+    - avoid-nested-conditional-expressions:
+        acceptable-level: 2
+    - prefer-moving-to-variable:
+        allowed-duplicated-chains: 2
+    - prefer-match-file-name:
+        exclude:
+          - test/**
+    - no-equal-arguments:
+        ignored-parameters:
+          - height
+          - width
+    - ban-name:
+        entries:
+          - ident: DateTime.now
+            description: Please use TimeProvider.now() instead
+    - member-ordering:
+        order:
+          - public-fields
+          - private-fields
+          - constructors
+          - close-method
+          - dispose-method
+        widgets-order:
+          - constructor
+          - init-state-method
+          - build-method
+          - did-change-dependencies-method
+          - did-update-widget-method
+          - dispose-method
+    - avoid-cascade-after-if-null
+    - avoid-collection-methods-with-unrelated-types
+    - avoid-duplicate-exports
+    - avoid-dynamic
+    - avoid-global-state
+    - avoid-ignoring-return-values
+    - avoid-missing-enum-constant-in-map
+    - avoid-non-null-assertion
+    - avoid-passing-async-when-sync-expected
+    - avoid-redundant-async
+    - avoid-throw-in-catch-block
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
+    - avoid-unrelated-type-assertions
+    - avoid-unused-parameters
+    - binary-expression-operand-order
+    - double-literal-format
+    - no-boolean-literal-compare
+    - no-empty-block
+    - no-equal-then-else
+    - no-magic-number
+    #allowed: [3.14, 100, 12]
+    - no-object-declaration
+    - prefer-async-await
+    - prefer-commenting-analyzer-ignores
+    - prefer-conditional-expressions
+    - prefer-correct-test-file-name
+    - prefer-correct-type-name
+    - prefer-enums-by-name
+    - prefer-first
+    - prefer-immediate-return
+    - prefer-iterable-of
+    - prefer-last
+    #- prefer-static-class
+    #  ignore-annotations:
+    #    - allowedAnnotation
+    #  ignore-private: true
+    #  ignore-names:
+    #    - (.*)Provider
+    #    - use(.*)
+    - avoid-expanded-as-spacer
+    - always-remove-listener
+    - avoid-returning-widgets
+    - avoid-shrink-wrap-in-lists
+    - avoid-unnecessary-setstate
+    - avoid-wrapping-in-padding
+    - check-for-equals-in-render-object-setters
+    - consistent-update-render-object
+    - prefer-const-border-radius
+    - prefer-correct-edge-insets-constructor
+    - prefer-extracting-callbacks
+    - prefer-single-widget-per-file:
+        ignore-private-widgets: true
+  anti-patterns:
+    - long-method
+    - long-parameter-list

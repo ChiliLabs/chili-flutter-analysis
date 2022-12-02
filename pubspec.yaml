@@ -1,0 +1,13 @@
+name: chili_flutter_analysis
+description: Lint rules for Chili Flutter projects
+version: 0.0.1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+dev_dependencies:
+  #Static code analysis
+  flutter_lints: ^2.0.0
+  dart_code_metrics: ^5.1.0
+  lints: ^2.0.0
+  test: ^1.16.0
