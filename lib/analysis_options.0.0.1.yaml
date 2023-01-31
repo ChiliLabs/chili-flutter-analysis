@@ -82,7 +82,6 @@ dart_code_metrics:
     - avoid-duplicate-exports
     - avoid-dynamic
     - avoid-global-state
-    - avoid-ignoring-return-values
     - avoid-missing-enum-constant-in-map
     - avoid-nested-conditional-expressions:
         acceptable-level: 2
@@ -140,7 +139,7 @@ dart_code_metrics:
     - prefer-last
     - prefer-match-file-name:
         exclude:
-          - test/**   
+          - test/**
     - prefer-moving-to-variable:
         allowed-duplicated-chains: 2
 
@@ -155,7 +154,12 @@ dart_code_metrics:
     - consistent-update-render-object
     - prefer-const-border-radius
     - prefer-correct-edge-insets-constructor
-    - prefer-extracting-callbacks
+    - prefer-extracting-callbacks:
+        ignored-named-arguments:
+          - listener
+          - builder
+          - onGenerateRoute
+          - onGeneratePages
     - prefer-single-widget-per-file:
         ignore-private-widgets: true
     - prefer-using-list-view
