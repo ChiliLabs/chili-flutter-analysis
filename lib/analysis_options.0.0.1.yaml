@@ -114,9 +114,9 @@ dart_code_metrics:
         widgets-order:
           - constructor
           - init-state-method
-          - build-method
           - did-change-dependencies-method
           - did-update-widget-method
+          - build-method
           - dispose-method
     - newline-before-return
     - no-boolean-literal-compare
