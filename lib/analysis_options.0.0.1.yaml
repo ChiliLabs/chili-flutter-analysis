@@ -6,6 +6,7 @@ analyzer:
   exclude:
     - '**/*.g.dart'
     - 'data/**/*.g.dart'
+    - '**/*.gen.dart'
 
 linter:
   rules:
@@ -73,9 +74,9 @@ dart_code_metrics:
     # Common
     - avoid-banned-imports:
         entries:
-        - paths: ["data/", "domain/"]
-          deny: ["package:flutter/widgets.dart", "package:flutter/material.dart", "package:flutter/cupertino.dart"]
-          message: "Do not import UI libs in domain/data layers"
+          - paths: [ "data/", "domain/" ]
+            deny: [ "package:flutter/widgets.dart", "package:flutter/material.dart", "package:flutter/cupertino.dart" ]
+            message: "Do not import UI libs in domain/data layers"
     - avoid-cascade-after-if-null
     - avoid-collection-methods-with-unrelated-types
     - avoid-double-slash-imports
@@ -97,9 +98,13 @@ dart_code_metrics:
     - avoid-unrelated-type-assertions
     - avoid-unused-parameters
     - ban-name:
+        exclude:
+          - domain/lib/time/time_provider.dart
         entries:
           - ident: DateTime.now
             description: Please use TimeProvider.now() instead
+          - ident: SharedPreferences.getInstance
+            description: Please use designated repository instead
     - binary-expression-operand-order
     - double-literal-format
     - format-comment:
@@ -126,6 +131,12 @@ dart_code_metrics:
         ignored-parameters:
           - height
           - width
+          - left
+          - right
+          - top
+          - bottom
+        ignored-arguments:
+          - dioTimeout
     - no-equal-then-else
     - no-object-declaration
     - prefer-async-await
@@ -151,7 +162,6 @@ dart_code_metrics:
     - avoid-returning-widgets
     - avoid-shrink-wrap-in-lists
     - avoid-unnecessary-setstate
-    - avoid-wrapping-in-padding
     - check-for-equals-in-render-object-setters
     - consistent-update-render-object
     - prefer-const-border-radius
