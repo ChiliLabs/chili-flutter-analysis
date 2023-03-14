@@ -81,6 +81,7 @@ dart_code_metrics:
     - avoid-collection-methods-with-unrelated-types
     - avoid-double-slash-imports
     - avoid-duplicate-exports
+    - avoid-dynamic
     - avoid-global-state
     - avoid-missing-enum-constant-in-map
     - avoid-nested-conditional-expressions:
@@ -103,7 +104,7 @@ dart_code_metrics:
           - ident: DateTime.now
             description: Please use TimeProvider.now() instead
           - ident: SharedPreferences.getInstance
-            description: Please use stats repository instead
+            description: Please use designated repository instead
     - binary-expression-operand-order
     - double-literal-format
     - format-comment:
