@@ -155,6 +155,28 @@ dart_code_metrics:
           - test/**
     - prefer-moving-to-variable:
         allowed-duplicated-chains: 2
+    - avoid-similar-names:
+        show-similarity: true
+        similarity-threshold: 0.9
+    - avoid-explicit-type-declaration
+    - avoid-non-null-assertion
+    - avoid-unsafe-collection-methods
+    - function-always-returns-null
+    - prefer-enums-by-name
+    - avoid-equal-expressions
+    - avoid-unnecessary-return
+    - avoid-shadowing
+    - avoid-redundant-else
+    - avoid-self-assignment
+    - list-all-equatable-fields
+    - arguments-ordering
+    - avoid-unnecessary-negations
+    - avoid-inverted-boolean-checks
+    - avoid-substring
+    - prefer-declaring-const-constructor:
+        allow-one: true
+    - prefer-early-return
+    - prefer-explicit-parameter-names
 
     # Flutter
     - always-remove-listener
@@ -175,6 +197,12 @@ dart_code_metrics:
     - prefer-single-widget-per-file:
         ignore-private-widgets: true
     - prefer-using-list-view
+    - avoid-stateless-widget-initialized-fields
+    - avoid-empty-setstate
+    - avoid-border-all
+    - dispose-fields
+    - avoid-unnecessary-stateful-widgets
+    - prefer-widget-private-members
 
   anti-patterns:
     - long-method
