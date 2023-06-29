@@ -61,6 +61,8 @@ linter:
     - use_rethrow_when_possible
     - valid_regexps
     - require_trailing_commas
+    - cancel_subscriptions
+    - close_sinks
 
 dart_code_metrics:
   metrics:
