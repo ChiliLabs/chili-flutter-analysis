@@ -107,6 +107,8 @@ dart_code_metrics:
             description: Please use TimeProvider.now() instead
           - ident: SharedPreferences.getInstance
             description: Please use designated repository instead
+          - ident: RichText
+            description: Please use Text.rich constructor to enable accessibility support
     - binary-expression-operand-order
     - double-literal-format
     - format-comment:
