@@ -173,7 +173,8 @@ dart_code_metrics:
     - avoid-redundant-else
     - avoid-self-assignment
     - list-all-equatable-fields
-    - arguments-ordering
+    - arguments-ordering:
+        child-last: true
     - avoid-unnecessary-negations
     - avoid-inverted-boolean-checks
     - avoid-substring
