@@ -119,6 +119,7 @@ dart_code_metrics:
           - public-fields
           - private-fields
           - constructors
+          - override-method
           - close-method
           - dispose-method
         widgets-order:
@@ -128,6 +129,7 @@ dart_code_metrics:
           - did-update-widget-method
           - build-method
           - dispose-method
+          - private-methods
     - newline-before-return
     - no-boolean-literal-compare
     - no-empty-block
