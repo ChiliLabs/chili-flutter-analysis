@@ -1,6 +1,6 @@
 name: chili_flutter_analysis
 description: Lint rules for Chili Flutter projects
-version: 0.0.1
+version: 1.0.0
 
 environment:
   sdk: '>=2.18.2 <3.0.0'

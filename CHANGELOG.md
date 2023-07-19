@@ -1,3 +1,3 @@
-## 0.0.1
+# 1.0.0
 
-- Initial dev version.
+- Add `analysis_options` used at [Chili Labs](https://chililabs.io)
