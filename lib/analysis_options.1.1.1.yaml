@@ -238,6 +238,7 @@ dart_code_metrics:
     - avoid-stateless-widget-initialized-fields
     - avoid-empty-setstate
     - avoid-border-all
+    - dispose-fields
     - avoid-unnecessary-stateful-widgets
     - prefer-widget-private-members:
         ignore-static: true
