@@ -1,3 +1,10 @@
+# 1.1.1
+**fix:** ignore parameter shadowing for `avoid-shadowing` rule
+**fix** add short variable exceptions `[ 'x', 'y', 'id' ]` to `prefer-correct-identifier-length`
+**fix** ignore static members for `prefer-widget-private-members` rule:
+
+**refactor:** remove `refer-type-over-var`, because of conflict with `avoid-explicit-type-declaration`
+
 # 1.1.0
 
 - **feat:** update deprecated rule:
