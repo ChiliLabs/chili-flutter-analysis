@@ -1,3 +1,6 @@
+# 1.1.2
+**refactor:** exclude `/test` folder from `avoid-importing-entrypoint-exports` rule
+
 # 1.1.1
 **fix:** ignore parameter shadowing for `avoid-shadowing` rule
 **fix** add short variable exceptions `[ 'x', 'y', 'id' ]` to `prefer-correct-identifier-length`
