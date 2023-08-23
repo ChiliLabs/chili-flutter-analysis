@@ -1,3 +1,53 @@
+# 1.2.0
+- **refactor:** remove `dart_code_metrics` dependency
+- **refactor:** remove [banned-usage](https://dcm.dev/docs/rules/common/banned-usage/) `RichText` identifier in favour of [prefer-text-rich](https://dcm.dev/docs/rules/flutter/prefer-text-rich/)
+- **refactor:** increase `max-identifier-length` of [prefer-correct-identifier-length](https://dcm.dev/docs/rules/common/prefer-correct-identifier-length/) to 40
+
+- **fix:** set `ignore-blocs` to `true` for `dispose-fields` (BlocProvider automatically handles disposal of the Bloc)
+
+- **feat:** additional lint rules:
+  #### Common:
+    - [avoid-map-keys-contains](https://dcm.dev/docs/rules/common/avoid-map-keys-contains/)
+    - [avoid-duplicate-mixins](https://dcm.dev/docs/rules/common/avoid-duplicate-mixins/)
+    - [avoid-nullable-interpolation](https://dcm.dev/docs/rules/common/avoid-nullable-interpolation/)
+    - [prefer-named-boolean-parameters](https://dcm.dev/docs/rules/common/prefer-named-boolean-parameters/)
+       ```yaml
+        ignore-single: true
+       ```
+    - [avoid-unused-instances](https://dcm.dev/docs/rules/common/avoid-unused-instances/)
+    - [prefer-correct-for-loop-increment](https://dcm.dev/docs/rules/common/prefer-correct-for-loop-increment/)
+    - [prefer-public-exception-classes](https://dcm.dev/docs/rules/common/prefer-public-exception-classes/)
+    - [match-class-name-pattern](https://dcm.dev/docs/rules/common/match-class-name-pattern/)
+       ```yaml
+        entries:
+          - path: .*_bloc_event.dart'
+            pattern: 'Event$'
+          - path: 'data/.*_request_body.dart'
+            pattern: 'RequestBody$'
+          - path: 'data/.*_response.dart'
+            pattern: 'Response$'
+       ```
+    - [avoid-unnecessary-reassignment](https://dcm.dev/docs/rules/common/avoid-unnecessary-reassignment/)
+    - [prefer-correct-error-name](https://dcm.dev/docs/rules/common/prefer-correct-error-name/)
+      ```yaml
+        allowed-names:
+          - ex
+       ```
+    - [avoid-long-functions](https://dcm.dev/docs/rules/common/avoid-long-functions/)
+      ```yaml
+        exclude:
+          - test/**
+        ignored-names:
+          - build
+          - builder
+          - listener
+          - itemBuilder
+       ```
+
+  #### Flutter:
+    - [avoid-recursive-widget-calls](https://dcm.dev/docs/rules/flutter/avoid-recursive-widget-calls/)
+    - [prefer-text-rich](https://dcm.dev/docs/rules/flutter/prefer-text-rich/)
+
 # 1.1.2
 **refactor:** exclude `/test` folder from `avoid-importing-entrypoint-exports` rule
 

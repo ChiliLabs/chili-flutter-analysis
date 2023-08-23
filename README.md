@@ -11,7 +11,7 @@ dev_dependencies:
   chili_flutter_analysis:
     git:
       url: https://github.com/ChiliLabs/chili-flutter-analysis.git
-      ref: 1.1.2
+      ref: 1.2.0
 ```
 
 ### Running the analyzer
