@@ -1,9 +1,18 @@
 # 1.2.0
+
+#### Dart:
+- **feat:** additional lint rules:
+  - [avoid_function_literals_in_foreach_calls](https://dart.dev/tools/linter-rules/avoid_function_literals_in_foreach_calls)
+  - [prefer_expression_function_bodies](https://dart.dev/tools/linter-rules/prefer_expression_function_bodies)
+  - [eol_at_end_of_file](https://dart.dev/tools/linter-rules/eol_at_end_of_file)
+  - [always_use_package_imports](https://dart.dev/tools/linter-rules/always_use_package_imports)
+
+#### DCM:
 - **refactor:** remove `dart_code_metrics` dependency
 - **refactor:** remove [banned-usage](https://dcm.dev/docs/rules/common/banned-usage/) `RichText` identifier in favour of [prefer-text-rich](https://dcm.dev/docs/rules/flutter/prefer-text-rich/)
 - **refactor:** increase `max-identifier-length` of [prefer-correct-identifier-length](https://dcm.dev/docs/rules/common/prefer-correct-identifier-length/) to 40
 
-- **fix:** set `ignore-blocs` to `true` for `dispose-fields` (BlocProvider automatically handles disposal of the Bloc)
+- **fix:** set `ignore-blocs` to `true` for `dispose-fields` (BlocProvider automatically handles disposal of the Bloc that is created via `Create` function)
 
 - **feat:** additional lint rules:
   #### Common:
@@ -49,9 +58,13 @@
     - [prefer-text-rich](https://dcm.dev/docs/rules/flutter/prefer-text-rich/)
 
 # 1.1.2
+
+#### DCM:
 **refactor:** exclude `/test` folder from `avoid-importing-entrypoint-exports` rule
 
 # 1.1.1
+
+#### DCM:
 **fix:** ignore parameter shadowing for `avoid-shadowing` rule
 **fix** add short variable exceptions `[ 'x', 'y', 'id' ]` to `prefer-correct-identifier-length`
 **fix** ignore static members for `prefer-widget-private-members` rule:
@@ -60,6 +73,7 @@
 
 # 1.1.0
 
+#### DCM:
 - **feat:** update deprecated rule:
     - [ban-name](https://dcm.dev/docs/rules/common/ban-name/) -> [banned-usage](https://dcm.dev/docs/rules/common/banned-usage/)
 

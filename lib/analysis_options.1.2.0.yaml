@@ -61,6 +61,10 @@ linter:
     - require_trailing_commas
     - cancel_subscriptions
     - close_sinks
+    - avoid_function_literals_in_foreach_calls
+    - prefer_expression_function_bodies
+    - eol_at_end_of_file
+    - always_use_package_imports
 
 dart_code_metrics:
   metrics:
