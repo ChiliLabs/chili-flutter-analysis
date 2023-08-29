@@ -1,7 +1,70 @@
+# 1.2.0
+
+#### Dart:
+- **feat:** additional lint rules:
+  - [avoid_function_literals_in_foreach_calls](https://dart.dev/tools/linter-rules/avoid_function_literals_in_foreach_calls)
+  - [prefer_expression_function_bodies](https://dart.dev/tools/linter-rules/prefer_expression_function_bodies)
+  - [eol_at_end_of_file](https://dart.dev/tools/linter-rules/eol_at_end_of_file)
+  - [always_use_package_imports](https://dart.dev/tools/linter-rules/always_use_package_imports)
+
+#### DCM:
+- **refactor:** remove `dart_code_metrics` dependency
+- **refactor:** remove [banned-usage](https://dcm.dev/docs/rules/common/banned-usage/) `RichText` identifier in favour of [prefer-text-rich](https://dcm.dev/docs/rules/flutter/prefer-text-rich/)
+- **refactor:** increase `max-identifier-length` of [prefer-correct-identifier-length](https://dcm.dev/docs/rules/common/prefer-correct-identifier-length/) to 40
+
+- **fix:** set `ignore-blocs` to `true` for `dispose-fields` (BlocProvider automatically handles disposal of the Bloc that is created via `Create` function)
+
+- **feat:** additional lint rules:
+  #### Common:
+    - [avoid-map-keys-contains](https://dcm.dev/docs/rules/common/avoid-map-keys-contains/)
+    - [avoid-duplicate-mixins](https://dcm.dev/docs/rules/common/avoid-duplicate-mixins/)
+    - [avoid-nullable-interpolation](https://dcm.dev/docs/rules/common/avoid-nullable-interpolation/)
+    - [prefer-named-boolean-parameters](https://dcm.dev/docs/rules/common/prefer-named-boolean-parameters/)
+       ```yaml
+        ignore-single: true
+       ```
+    - [avoid-unused-instances](https://dcm.dev/docs/rules/common/avoid-unused-instances/)
+    - [prefer-correct-for-loop-increment](https://dcm.dev/docs/rules/common/prefer-correct-for-loop-increment/)
+    - [prefer-public-exception-classes](https://dcm.dev/docs/rules/common/prefer-public-exception-classes/)
+    - [match-class-name-pattern](https://dcm.dev/docs/rules/common/match-class-name-pattern/)
+       ```yaml
+        entries:
+          - path: .*_bloc_event.dart'
+            pattern: 'Event$'
+          - path: 'data/.*_request_body.dart'
+            pattern: 'RequestBody$'
+          - path: 'data/.*_response.dart'
+            pattern: 'Response$'
+       ```
+    - [avoid-unnecessary-reassignment](https://dcm.dev/docs/rules/common/avoid-unnecessary-reassignment/)
+    - [prefer-correct-error-name](https://dcm.dev/docs/rules/common/prefer-correct-error-name/)
+      ```yaml
+        allowed-names:
+          - ex
+       ```
+    - [avoid-long-functions](https://dcm.dev/docs/rules/common/avoid-long-functions/)
+      ```yaml
+        exclude:
+          - test/**
+        ignored-names:
+          - build
+          - builder
+          - listener
+          - itemBuilder
+       ```
+
+  #### Flutter:
+    - [avoid-recursive-widget-calls](https://dcm.dev/docs/rules/flutter/avoid-recursive-widget-calls/)
+    - [prefer-text-rich](https://dcm.dev/docs/rules/flutter/prefer-text-rich/)
+
 # 1.1.2
+
+#### DCM:
 **refactor:** exclude `/test` folder from `avoid-importing-entrypoint-exports` rule
 
 # 1.1.1
+
+#### DCM:
 **fix:** ignore parameter shadowing for `avoid-shadowing` rule
 **fix** add short variable exceptions `[ 'x', 'y', 'id' ]` to `prefer-correct-identifier-length`
 **fix** ignore static members for `prefer-widget-private-members` rule:
@@ -10,6 +73,7 @@
 
 # 1.1.0
 
+#### DCM:
 - **feat:** update deprecated rule:
     - [ban-name](https://dcm.dev/docs/rules/common/ban-name/) -> [banned-usage](https://dcm.dev/docs/rules/common/banned-usage/)
 
