@@ -226,6 +226,7 @@ dart_code_metrics:
     - avoid-nullable-interpolation
     - prefer-named-boolean-parameters:
         ignore-single: true
+        ignore-single-boolean: true
     - avoid-unused-instances
     - prefer-correct-for-loop-increment
     - prefer-public-exception-classes

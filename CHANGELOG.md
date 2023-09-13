@@ -10,6 +10,7 @@
 #### DCM:
 - **refactor:** remove redundant lint rule `prefer-declaring-const-constructors`
 - **refactor:** add `withBloc` getter name to `ignored-names` for `avoid-returning-widgets` in favour [prefer-getter-over-method](https://dcm.dev/docs/rules/common/prefer-getter-over-method/)
+- **refactor** set `ignore-single-boolean` to `true` for `prefer-named-boolean-parameters` lint rule
 
 - **feat:** additional lint rules:
   #### Common:
