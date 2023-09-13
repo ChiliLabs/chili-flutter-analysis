@@ -1,3 +1,31 @@
+# 1.2.1
+#### Dart:
+- **feat:** additional lint rules:
+  - [unnecessary_breaks](https://dart.dev/tools/linter-rules/unnecessary_breaks)
+  - [use_rethrow_when_possible](https://dart.dev/tools/linter-rules/use_rethrow_when_possible)
+  - [use_string_in_part_of_directives](https://dart.dev/tools/linter-rules/use_string_in_part_of_directives)
+  - [constant_identifier_names](https://dart.dev/tools/linter-rules/constant_identifier_names)
+  - [use_super_parameters](https://dart.dev/tools/linter-rules/use_super_parameters)
+
+#### DCM:
+- **refactor:** remove redundant lint rule `prefer-declaring-const-constructors`
+- **refactor:** add `withBloc` getter name to `ignored-names` for `avoid-returning-widgets` in favour [prefer-getter-over-method](https://dcm.dev/docs/rules/common/prefer-getter-over-method/)
+
+- **feat:** additional lint rules:
+  #### Common:
+  - [prefer-getter-over-method](https://dcm.dev/docs/rules/common/prefer-getter-over-method/)
+  - [avoid-referencing-discarded-variables](https://dcm.dev/docs/rules/common/avoid-referencing-discarded-variables/)
+  - [avoid-unconditional-break](https://dcm.dev/docs/rules/common/avoid-unconditional-break/)
+  - [avoid-weak-cryptographic-algorithms](https://dcm.dev/docs/rules/common/avoid-weak-cryptographic-algorithms/)
+  - [avoid-identical-exception-handling-blocks](https://dcm.dev/docs/rules/common/avoid-identical-exception-handling-blocks/)
+  - [avoid-recursive-calls](https://dcm.dev/docs/rules/common/avoid-recursive-calls/)
+  - [move-variable-closer-to-its-usage](https://dcm.dev/docs/rules/common/move-variable-closer-to-its-usage/)
+  - [avoid-missing-interpolation](https://dcm.dev/docs/rules/common/avoid-missing-interpolation/)
+  - [avoid-unnecessary-if](https://dcm.dev/docs/rules/common/avoid-unnecessary-if/)
+  - [avoid-passing-default-values](https://dcm.dev/docs/rules/common/avoid-passing-default-values/)
+  - [avoid-passing-self-as-argument](https://dcm.dev/docs/rules/common/avoid-passing-self-as-argument/)
+  - [prefer-trailing-comma](https://dcm.dev/docs/rules/common/prefer-trailing-comma/)
+
 # 1.2.0
 
 #### Dart:
@@ -8,7 +36,7 @@
   - [always_use_package_imports](https://dart.dev/tools/linter-rules/always_use_package_imports)
 
 #### DCM:
-- **refactor:** remove `dart_code_metrics` dependency
+- **refactor:** remove `dart_code_metrics` dependency from `analysis_options.yaml`
 - **refactor:** remove [banned-usage](https://dcm.dev/docs/rules/common/banned-usage/) `RichText` identifier in favour of [prefer-text-rich](https://dcm.dev/docs/rules/flutter/prefer-text-rich/)
 - **refactor:** increase `max-identifier-length` of [prefer-correct-identifier-length](https://dcm.dev/docs/rules/common/prefer-correct-identifier-length/) to 40
 
