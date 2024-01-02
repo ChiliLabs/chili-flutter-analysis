@@ -250,7 +250,6 @@ dart_code_metrics:
           - builder
           - listener
           - itemBuilder
-    - prefer-getter-over-method
     - avoid-referencing-discarded-variables
     - avoid-unconditional-break
     - avoid-weak-cryptographic-algorithms
