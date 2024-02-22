@@ -1,0 +1,303 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+    - 'data/**/*.g.dart'
+    - '**/*.gen.dart'
+
+linter:
+  rules:
+    - always_declare_return_types
+    - always_require_non_null_named_parameters
+    - annotate_overrides
+    - avoid_init_to_null
+    - avoid_null_checks_in_equality_operators
+    - avoid_relative_lib_imports
+    - avoid_return_types_on_setters
+    - avoid_shadowing_type_parameters
+    - avoid_single_cascade_in_expression_statements
+    - avoid_types_as_parameter_names
+    - await_only_futures
+    - camel_case_extensions
+    - curly_braces_in_flow_control_structures
+    - empty_catches
+    - empty_constructor_bodies
+    - library_names
+    - library_prefixes
+    - no_duplicate_case_values
+    - null_closures
+    - omit_local_variable_types
+    - prefer_adjacent_string_concatenation
+    - prefer_collection_literals
+    - prefer_conditional_assignment
+    - prefer_contains
+    - prefer_equal_for_default_values
+    - prefer_final_fields
+    - prefer_for_elements_to_map_fromIterable
+    - prefer_generic_function_type_aliases
+    - prefer_if_null_operators
+    - prefer_inlined_adds
+    - prefer_is_empty
+    - prefer_is_not_empty
+    - prefer_iterable_whereType
+    - prefer_single_quotes
+    - prefer_spread_collections
+    - recursive_getters
+    - slash_for_doc_comments
+    - type_init_formals
+    - unawaited_futures
+    - unnecessary_brace_in_string_interps
+    - unnecessary_const
+    - unnecessary_getters_setters
+    - unnecessary_new
+    - unnecessary_null_in_if_null_operators
+    - unnecessary_this
+    - unrelated_type_equality_checks
+    - unsafe_html
+    - use_function_type_syntax_for_parameters
+    - use_rethrow_when_possible
+    - valid_regexps
+    - require_trailing_commas
+    - cancel_subscriptions
+    - close_sinks
+    - avoid_function_literals_in_foreach_calls
+    - prefer_expression_function_bodies
+    - eol_at_end_of_file
+    - always_use_package_imports
+    - unnecessary_breaks
+    - use_string_in_part_of_directives
+    - constant_identifier_names
+    - use_super_parameters
+
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 20
+    number-of-parameters: 4
+    maximum-nesting-level: 3
+  metrics-exclude:
+    - test/**
+  rules:
+
+    # Common
+    - avoid-banned-imports:
+        entries:
+          - paths: [ "data/", "domain/" ]
+            deny: [ "package:flutter/widgets.dart", "package:flutter/material.dart", "package:flutter/cupertino.dart" ]
+            message: "Do not import UI libs in domain/data layers"
+    - avoid-cascade-after-if-null
+    - avoid-collection-methods-with-unrelated-types
+    - avoid-double-slash-imports
+    - avoid-duplicate-exports
+    - avoid-dynamic
+    - avoid-global-state
+    - avoid-missing-enum-constant-in-map
+    - avoid-nested-conditional-expressions:
+        acceptable-level: 2
+    - avoid-non-null-assertion
+    - avoid-passing-async-when-sync-expected:
+        exclude:
+          - test/**
+    - avoid-redundant-async
+    - avoid-throw-in-catch-block
+    - avoid-unnecessary-conditionals
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
+    - avoid-unrelated-type-assertions
+    - avoid-unused-parameters
+    - banned-usage:
+        exclude:
+          - domain/lib/time/time_provider.dart
+        entries:
+          - ident: DateTime.now
+            description: Please use TimeProvider.now() instead
+          - ident: SharedPreferences.getInstance
+            description: Please use designated repository instead
+    - binary-expression-operand-order
+    - double-literal-format
+    - format-comment:
+        only-doc-comments: false
+    - member-ordering:
+        alphabetize: false
+        order:
+          - public-fields
+          - private-fields
+          - constructors
+          - override-method
+          - close-method
+          - dispose-method
+        widgets-order:
+          - constructor
+          - init-state-method
+          - did-change-dependencies-method
+          - did-update-widget-method
+          - build-method
+          - dispose-method
+          - private-methods
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - no-equal-arguments:
+        ignored-parameters:
+          - height
+          - width
+          - left
+          - right
+          - top
+          - bottom
+          - backgroundColor
+          - barrierColor
+          - focusedBorder
+          - enabledBorder
+          - topLeft
+          - topRight
+          - bottomLeft
+          - bottomRight
+          - highlightColor
+          - splashColor
+          - selectedItemColor
+          - unselectedItemColor
+          - selectedLabelStyle
+          - unselectedLabelStyle
+        ignored-arguments:
+          - dioTimeout
+    - no-equal-then-else
+    - no-object-declaration
+    - prefer-async-await
+    - prefer-commenting-analyzer-ignores
+    - prefer-conditional-expressions
+    - prefer-correct-test-file-name
+    - prefer-correct-type-name:
+        min-length: 3
+    - prefer-enums-by-name
+    - prefer-first
+    - prefer-immediate-return
+    - prefer-iterable-of
+    - prefer-last
+    - prefer-match-file-name:
+        exclude:
+          - test/**
+    - prefer-moving-to-variable:
+        allowed-duplicated-chains: 2
+    - avoid-similar-names:
+        show-similarity: true
+        similarity-threshold: 0.9
+    - avoid-explicit-type-declaration
+    - avoid-non-null-assertion
+    - avoid-unsafe-collection-methods
+    - function-always-returns-null
+    - prefer-enums-by-name
+    - avoid-equal-expressions
+    - avoid-unnecessary-return
+    - avoid-shadowing:
+        ignore-parameters: true
+    - avoid-redundant-else
+    - avoid-self-assignment
+    - list-all-equatable-fields
+    - arguments-ordering:
+        child-last: true
+    - avoid-unnecessary-negations
+    - avoid-inverted-boolean-checks
+    - avoid-substring
+    - prefer-declaring-const-constructor:
+        allow-one: true
+    - prefer-early-return
+    - prefer-explicit-parameter-names
+    - avoid-mutating-parameters
+    - no-equal-nested-conditions
+    - avoid-negated-conditions
+    - avoid-unnecessary-futures
+    - avoid-shadowed-extension-methods
+    - avoid-importing-entrypoint-exports:
+        exclude:
+          - test/**
+    - prefer-date-format
+    - prefer-correct-identifier-length:
+        exceptions: [ 'x', 'y', 'id' ]
+        max-identifier-length: 40
+        min-identifier-length: 3
+    - no-equal-conditions
+    - prefer-returning-conditional-expressions
+    - avoid-unrelated-type-casts
+    - avoid-missed-calls
+    - avoid-map-keys-contains
+    - avoid-duplicate-mixins
+    - avoid-nullable-interpolation
+    - prefer-named-boolean-parameters:
+        ignore-single: true
+        ignore-single-boolean: true
+    - avoid-unused-instances
+    - prefer-correct-for-loop-increment
+    - prefer-public-exception-classes
+    - match-class-name-pattern:
+        entries:
+        - path: '.*_bloc_event.dart'
+          pattern: 'Event$'
+        - path: 'data/.*_request_body.dart'
+          pattern: 'RequestBody$'
+        - path: 'data/.*_response.dart'
+          pattern: 'Response$'
+    - avoid-unnecessary-reassignment
+    - prefer-correct-error-name:
+        allowed-names:
+          - ex
+    - avoid-long-functions:
+        exclude:
+          - test/**
+        ignored-names:
+          - build
+          - builder
+          - listener
+          - itemBuilder
+    - avoid-referencing-discarded-variables
+    - avoid-unconditional-break
+    - avoid-weak-cryptographic-algorithms
+    - avoid-identical-exception-handling-blocks
+    - avoid-recursive-calls
+    - move-variable-closer-to-its-usage
+    - avoid-missing-interpolation
+    - avoid-unnecessary-if
+    - avoid-passing-default-values
+    - avoid-passing-self-as-argument
+    - prefer-trailing-comma
+
+    # Flutter
+    - always-remove-listener
+    - avoid-expanded-as-spacer
+    - avoid-returning-widgets:
+        - ignored-names:
+            - withBloc
+    - avoid-shrink-wrap-in-lists
+    - avoid-unnecessary-setstate
+    - check-for-equals-in-render-object-setters
+    - consistent-update-render-object
+    - prefer-const-border-radius
+    - prefer-correct-edge-insets-constructor
+    - prefer-extracting-callbacks:
+        ignored-named-arguments:
+          - listener
+          - builder
+          - onGenerateRoute
+          - onGeneratePages
+    - prefer-single-widget-per-file:
+        ignore-private-widgets: true
+    - prefer-using-list-view
+    - avoid-stateless-widget-initialized-fields
+    - avoid-empty-setstate
+    - avoid-border-all
+    - dispose-fields:
+        ignore-blocs: true
+    - avoid-unnecessary-stateful-widgets
+    - prefer-widget-private-members:
+        ignore-static: true
+    - avoid-missing-image-alt:
+        allow-empty: false
+    - avoid-unnecessary-overrides-in-state
+    - prefer-dedicated-media-query-methods
+    - use-setstate-synchronously
+    - avoid-recursive-widget-calls
+    - prefer-text-rich
+
+  anti-patterns:
+    - long-method
+    - long-parameter-list

@@ -1,4 +1,9 @@
+# 1.2.2
+#### Dart:
+- **refactor** remove duplicate lint rule `use_rethrow_when_possible`
+
 # 1.2.1
+
 #### Dart:
 - **feat:** additional lint rules:
   - [unnecessary_breaks](https://dart.dev/tools/linter-rules/unnecessary_breaks)
