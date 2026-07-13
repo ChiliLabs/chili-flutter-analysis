@@ -280,7 +280,8 @@ dart_code_metrics:
     - prefer-getter-over-method:
         ignored-names:
           - withBloc
-    - avoid-long-parameter-list
+    - avoid-long-parameter-list:
+        max-number: 10
 
     # Flutter
     - always-remove-listener
