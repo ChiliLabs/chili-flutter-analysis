@@ -189,7 +189,7 @@ dart_code_metrics:
           - test/**
     - prefer-date-format
     - prefer-correct-identifier-length:
-        exceptions: [ 'x', 'y', 'id' ]
+        exceptions: [ 'x', 'y', 'id', 'ex', 'to', 'no' ]
         max-identifier-length: 40
         min-identifier-length: 3
     - no-equal-conditions
