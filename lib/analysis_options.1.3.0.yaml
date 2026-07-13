@@ -137,30 +137,6 @@ dart_code_metrics:
     - newline-before-return
     - no-boolean-literal-compare
     - no-empty-block
-    - no-equal-arguments:
-        ignored-parameters:
-          - height
-          - width
-          - left
-          - right
-          - top
-          - bottom
-          - backgroundColor
-          - barrierColor
-          - focusedBorder
-          - enabledBorder
-          - topLeft
-          - topRight
-          - bottomLeft
-          - bottomRight
-          - highlightColor
-          - splashColor
-          - selectedItemColor
-          - unselectedItemColor
-          - selectedLabelStyle
-          - unselectedLabelStyle
-        ignored-arguments:
-          - dioTimeout
     - no-equal-then-else
     - no-object-declaration
     - prefer-async-await
@@ -183,10 +159,8 @@ dart_code_metrics:
         show-similarity: true
         similarity-threshold: 0.9
     - avoid-explicit-type-declaration
-    - avoid-non-null-assertion
     - avoid-unsafe-collection-methods
     - function-always-returns-null
-    - prefer-enums-by-name
     - avoid-equal-expressions
     - avoid-unnecessary-return
     - avoid-shadowing:
@@ -195,7 +169,9 @@ dart_code_metrics:
     - avoid-self-assignment
     - list-all-equatable-fields
     - arguments-ordering:
-        child-last: true
+        last:
+          - child
+          - children
     - avoid-unnecessary-negations
     - avoid-inverted-boolean-checks
     - avoid-substring
@@ -279,7 +255,7 @@ dart_code_metrics:
     - avoid-unnecessary-super
     - prefer-correct-setter-parameter-name
     - prefer-correct-callback-field-name
-    - prefer-explicit-function-type]
+    - prefer-explicit-function-type
     - prefer-typedefs-for-callbacks
     - prefer-addition-subtraction-assignments
     - prefer-switch-with-enums
@@ -304,6 +280,7 @@ dart_code_metrics:
     - prefer-getter-over-method:
         ignored-names:
           - withBloc
+    - avoid-long-parameter-list
 
     # Flutter
     - always-remove-listener
@@ -347,7 +324,3 @@ dart_code_metrics:
     - avoid-undisposed-instances
     - avoid-unnecessary-gesture-detector
     - avoid-missing-controller
-
-  anti-patterns:
-    - long-method
-    - long-parameter-list
