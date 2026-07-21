@@ -1,4 +1,67 @@
+# 1.3.0
+
+#### DCM:
+- **feat:** additional lint rules:
+  #### Common:
+  - [avoid-local-functions](https://dcm.dev/docs/rules/common/avoid-local-functions/)
+  - [avoid-nullable-parameters-with-default-values](https://dcm.dev/docs/rules/common/avoid-nullable-parameters-with-default-values/)
+  - [avoid-extensions-on-records](https://dcm.dev/docs/rules/common/avoid-extensions-on-records/)
+  - [avoid-accessing-collections-by-constant-index](https://dcm.dev/docs/rules/common/avoid-accessing-collections-by-constant-index/)
+  - [avoid-long-files](https://dcm.dev/docs/rules/common/avoid-long-files/)
+  - [avoid-unnecessary-getter](https://dcm.dev/docs/rules/common/avoid-unnecessary-getter/)
+  - [match-getter-setter-field-names](https://dcm.dev/docs/rules/common/match-getter-setter-field-names/)
+  - [avoid-wildcard-cases-with-enums](https://dcm.dev/docs/rules/common/avoid-wildcard-cases-with-enums/)
+  - [avoid-unnecessary-local-late](https://dcm.dev/docs/rules/common/avoid-unnecessary-local-late/)
+  - [prefer-null-aware-spread](https://dcm.dev/docs/rules/common/prefer-null-aware-spread/)
+  - [prefer-unique-test-names](https://dcm.dev/docs/rules/common/prefer-unique-test-names/)
+  - [avoid-duplicate-cascades](https://dcm.dev/docs/rules/common/avoid-duplicate-cascades/)
+  - [prefer-specific-cases-first](https://dcm.dev/docs/rules/common/prefer-specific-cases-first/)
+  - [avoid-duplicate-switch-case-conditions](https://dcm.dev/docs/rules/common/avoid-duplicate-switch-case-conditions/)
+  - [match-lib-folder-structure](https://dcm.dev/docs/rules/common/match-lib-folder-structure/)
+  - [avoid-collection-mutating-methods](https://dcm.dev/docs/rules/common/avoid-collection-mutating-methods/)
+  - [avoid-unnecessary-super](https://dcm.dev/docs/rules/common/avoid-unnecessary-super/)
+  - [prefer-correct-setter-parameter-name](https://dcm.dev/docs/rules/common/prefer-correct-setter-parameter-name/)
+  - [prefer-correct-callback-field-name](https://dcm.dev/docs/rules/common/prefer-correct-callback-field-name/)
+  - [prefer-explicit-function-type](https://dcm.dev/docs/rules/common/prefer-explicit-function-type/)
+  - [prefer-typedefs-for-callbacks](https://dcm.dev/docs/rules/common/prefer-typedefs-for-callbacks/)
+  - [prefer-addition-subtraction-assignments](https://dcm.dev/docs/rules/common/prefer-addition-subtraction-assignments/)
+  - [prefer-switch-with-enums](https://dcm.dev/docs/rules/common/prefer-switch-with-enums/)
+  - [avoid-misused-test-matchers](https://dcm.dev/docs/rules/common/avoid-misused-test-matchers/)
+  - [prefer-any-or-every](https://dcm.dev/docs/rules/common/prefer-any-or-every/)
+  - [avoid-duplicate-test-assertions](https://dcm.dev/docs/rules/common/avoid-duplicate-test-assertions/)
+  - [avoid-duplicate-collection-elements](https://dcm.dev/docs/rules/common/avoid-duplicate-collection-elements/)
+  - [avoid-duplicate-map-keys](https://dcm.dev/docs/rules/common/avoid-duplicate-map-keys/)
+  - [move-variable-outside-iteration](https://dcm.dev/docs/rules/common/move-variable-outside-iteration/)
+  - [avoid-nullable-tostring](https://dcm.dev/docs/rules/common/avoid-nullable-tostring/)
+  - [avoid-duplicate-initializers](https://dcm.dev/docs/rules/common/avoid-duplicate-initializers/)
+  - [avoid-unused-after-null-check](https://dcm.dev/docs/rules/common/avoid-unused-after-null-check/)
+  - [avoid-empty-test-groups](https://dcm.dev/docs/rules/common/avoid-empty-test-groups/)
+  - [avoid-contradictory-expressions](https://dcm.dev/docs/rules/common/avoid-contradictory-expressions/)
+  - [avoid-excessive-expressions](https://dcm.dev/docs/rules/common/avoid-excessive-expressions/)
+  - [avoid-returning-void](https://dcm.dev/docs/rules/common/avoid-returning-void/)
+  - [avoid-empty-spread](https://dcm.dev/docs/rules/common/avoid-empty-spread/)
+  - [avoid-missing-completer-stack-trace](https://dcm.dev/docs/rules/common/avoid-missing-completer-stack-trace/)
+  - [avoid-slow-collection-methods](https://dcm.dev/docs/rules/common/avoid-slow-collection-methods/)
+  - [avoid-unnecessary-collections](https://dcm.dev/docs/rules/common/avoid-unnecessary-collections/)
+  - [avoid-conditions-with-boolean-literals](https://dcm.dev/docs/rules/common/avoid-conditions-with-boolean-literals/)
+  - [prefer-getter-over-method](https://dcm.dev/docs/rules/common/prefer-getter-over-method/)
+     ```yaml
+        ignored-names:
+          - withBloc
+       ```
+  #### Flutter:
+  - [avoid-single-child-column-or-row](https://dcm.dev/docs/rules/flutter/avoid-single-child-column-or-row/)
+  - [prefer-sliver-prefix](https://dcm.dev/docs/rules/flutter/prefer-sliver-prefix/)
+  - [avoid-functions-in-register-singleton](https://dcm.dev/docs/rules/get-it/avoid-functions-in-register-singleton/)
+  - [avoid-undisposed-instances](https://dcm.dev/docs/rules/flutter/avoid-undisposed-instances/)
+  - [avoid-unnecessary-gesture-detector](https://dcm.dev/docs/rules/flutter/avoid-unnecessary-gesture-detector/)
+  - [avoid-missing-controller](https://dcm.dev/docs/rules/flutter/avoid-missing-controller/)
+
+#### Other:
+  - Bump [flutter_lints](https://pub.dev/packages/flutter_lints) version from `3.0.1` to `3.0.2`
+
 # 1.2.2
+
 #### Dart:
 - **refactor** remove duplicate lint rule `use_rethrow_when_possible`
 

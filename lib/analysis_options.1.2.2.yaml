@@ -260,6 +260,50 @@ dart_code_metrics:
     - avoid-passing-default-values
     - avoid-passing-self-as-argument
     - prefer-trailing-comma
+    - avoid-local-functions
+    - avoid-nullable-parameters-with-default-values
+    - avoid-extensions-on-records
+    - avoid-accessing-collections-by-constant-index
+    - avoid-long-files
+    - avoid-unnecessary-getter
+    - match-getter-setter-field-names
+    - avoid-wildcard-cases-with-enums
+    - avoid-unnecessary-local-late
+    - prefer-null-aware-spread
+    - prefer-unique-test-names
+    - avoid-duplicate-cascades
+    - prefer-specific-cases-first
+    - avoid-duplicate-switch-case-conditions
+    - match-lib-folder-structure
+    - avoid-collection-mutating-methods
+    - avoid-unnecessary-super
+    - prefer-correct-setter-parameter-name
+    - prefer-correct-callback-field-name
+    - prefer-explicit-function-type]
+    - prefer-typedefs-for-callbacks
+    - prefer-addition-subtraction-assignments
+    - prefer-switch-with-enums
+    - avoid-misused-test-matchers
+    - prefer-any-or-every
+    - avoid-duplicate-test-assertions
+    - avoid-duplicate-collection-elements
+    - avoid-duplicate-map-keys
+    - move-variable-outside-iteration
+    - avoid-nullable-tostring
+    - avoid-duplicate-initializers
+    - avoid-unused-after-null-check
+    - avoid-empty-test-groups
+    - avoid-contradictory-expressions
+    - avoid-excessive-expressions
+    - avoid-returning-void
+    - avoid-empty-spread
+    - avoid-missing-completer-stack-trace
+    - avoid-slow-collection-methods
+    - avoid-unnecessary-collections
+    - avoid-conditions-with-boolean-literals
+    - prefer-getter-over-method:
+        ignored-names:
+          - withBloc
 
     # Flutter
     - always-remove-listener
@@ -297,6 +341,12 @@ dart_code_metrics:
     - use-setstate-synchronously
     - avoid-recursive-widget-calls
     - prefer-text-rich
+    - avoid-single-child-column-or-row
+    - prefer-sliver-prefix
+    - avoid-functions-in-register-singleton
+    - avoid-undisposed-instances
+    - avoid-unnecessary-gesture-detector
+    - avoid-missing-controller
 
   anti-patterns:
     - long-method
